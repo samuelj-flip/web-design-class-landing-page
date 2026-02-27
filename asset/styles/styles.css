@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url(/asset/img/snd_back_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header .logo img {
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header nav ul li, header nav ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav ul li a:hover {
+    background-color: #004792;
+    padding: 1rem 2rem;
+    transition: ease 0.5s;
+}
+
+header #hamburger {
+    display: none;
+}
+
+#mobile {
+    display: none;
+}
+
+section {
+    text-align: center;
+    margin-top: 150px;
+}
+
+section p {
+    font-size: clamp(5px, 30px, 50px);
+}
+
+section .cta {
+    text-decoration: none;
+    color: #fff;
+    background-color: hsla(209, 100%, 50%, 0.918);
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+    top: 30px;
+}
+
+section .cta:hover {
+    background-color: hsla(239, 100%, 50%, 0.781);
+    transition: background-color ease-in-out 0.5s;
+}
+
+@media (width <= 552px) {
+    header nav {
+        display: none;
+    }
+
+    header #hamburger {
+        display: block;
+    }
+
+    #mobile.show {
+        display: block;
+        float: right;
+        background-color: rgba(55, 124, 180, 0.801);
+        padding-right: 4rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    #mobile.show a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
